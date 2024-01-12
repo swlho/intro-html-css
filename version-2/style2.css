@@ -86,8 +86,16 @@ body {
     background: grey;
 }
 
-#text {
-    display: none;
+.instructions {
+    display: block;
+    justify-content: center;
+    font: Impact;
+    font-size: 2.5rem;
+    color: rgb(255, 0, 98);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @media all and (max-width: 800px) {
@@ -119,6 +127,10 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .instructions {
+        display: none;
     }
 
 }
