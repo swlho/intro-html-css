@@ -1,0 +1,118 @@
+html {
+    background-color: bisque;
+    height: 100vh;
+}
+
+body {
+    font-family:sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav main other"
+        "footer footer footer";
+    grid-template-rows: 80px 1fr 70px;  
+    grid-template-columns: 20% 1fr 15%;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    height: 99vh;
+    margin: 0;
+    
+}
+
+#pageHeader, #pageFooter, #pageNav, #pageMain, #pageOther {
+    padding: 1.2em
+}
+
+#pageHeader {
+    grid-area: header;
+    background: purple;
+}
+#pageFooter {
+    grid-area: footer;
+    background: purple;
+}
+
+#pageNav {
+    grid-area: nav;
+    background: yellow;
+}
+
+#pageMain {
+    grid-area: main;
+    display: flex;
+    justify-content: center;
+    border-width: 10px;
+    border-color: black;
+    background: grey;
+    
+}
+
+#pageOther {
+    grid-area: other;
+    background: pink;
+}
+
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+    .container {
+        grid-template-areas: 
+            "header"
+            "main"
+            "other"
+            "nav"
+            "footer";
+        grid-template-rows: 80px 1fr 70px 1fr 70px;  
+        grid-template-columns: 1fr;
+    }
+}
+
+/*font styling*/
+
+a {
+    font-size: small;
+}
+
+ul {
+    color: blueviolet;
+}
+
+ol {
+    color: green;
+}
+
+/* img coffee circle*/
+#outsideContainer {
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    position: relative;
+    width: 70vmin;
+    height: 70vmin;
+    background: rgb(255, 172, 179);
+    clip-path: circle();
+}
+
+#insideContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    /* background: white; */
+    clip-path: circle();
+    
+}
+
+#coffee_laptop {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100%;
+}
+/* img end */
